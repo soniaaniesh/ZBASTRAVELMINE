@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "4.0"
+metadata:
+  name: travelapp.project2
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: abap-cloud-abap_dev_trial-06618e2btrial-dev
+          url: https://bb8534dd-13b7-4042-bba9-41728e5288ac.abap.us10.hana.ondemand.com/
+          scp: true
+        app:
+          name: ZBSP1_TRAVEL1
+          description: first deploy of travelapp
+          package: ZBAS_FIORI
+          transport: ''
+        exclude:
+          - /test/
+          - /localService/
