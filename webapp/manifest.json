@@ -42,6 +42,20 @@
           "odataVersion": "2.0"
         }
       }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "TravelProcessor-Display": {
+          "semanticObject": "TravelProcessor",
+          "action": "Display",
+          "title": "{{TravelProcessor-Display.flpTitle}}",
+          "subTitle": "{{TravelProcessor-Display.flpSubtitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
     }
   },
   "sap.ui": {
